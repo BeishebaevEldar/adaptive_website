@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+}
+
+.container{
+    width: auto;
+    height: auto;
+    background-color: aquamarine;
+    font-family: 'Roboto', sans-serif;
+
+}
+.header{
+    border:2px solid;
+
+}
+.header ul{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 60px;
+    list-style: none;
+}
+.header ul li{
+
+}
+.con{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    margin-bottom: 60px;
+    background-color: blue;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 130px;
+}
+.maincontent{
+    width: auto;
+    height: auto;
+}
+
+#burger,
+[for = "burger"]{
+    display: none;
+}
+@media(max-width:1340px){
+    .container{
+        background-color: blueviolet;
+
+    }
+    .con{
+        background-color: chartreuse;
+        margin: 10px;
+        transition: 1s;
+    }
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+}
+@media(max-width:500px){
+
+    .con{
+        background-color: rgb(105, 105, 105);
+        width: 300px;
+        height: 200px;
+        transition: 1s;
+    }
+    .content{
+        width: auto;
+        height: auto;
+
+    }
+    .maincontent{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media(max-width:400px){
+    .container{
+        width: auto;
+        height: auto;
+    }
+
+    .con{
+        background-color: rgb(105, 105, 105);
+        height: 200px;
+        width: 200px;
+        transition: 1s;
+    }
+    .content{
+        width: auto;
+        height: auto;
+
+    }
+    .maincontent{
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    [for = "burger"]{
+        display: block;
+        right: 20px;
+        top: 10px;
+        text-align: center;
+        font-size: 25px;
+        transition: 1s;
+
+    }
+    [for = 'burger']::before{
+        content: "☰";
+    }
+    #burger:checked+[for="burger"]::before{
+        content:"X";
+    }
+    .header ul{
+        flex-wrap: wrap;
+        display: flex;  
+        width: 90px;
+        margin-left: 90px;
+        height: 150px;
+    }
+    .header{
+        background-color: aqua;
+    }
+    
+    nav{
+        display: none;
+        top: 0;
+        margin-top: 10px;
+        width: 94%;
+        padding: 10px;
+        
+
+    }
+    li{
+        text-align: center;
+    }
+    #burger:checked + label + nav{
+        display: block;
+    }
+}
+@media(max-width:280px){
+    .header ul{
+        
+        flex-wrap: wrap;
+        display: flex;  
+        width: 90px;
+        height: 150px;
+        margin-left: 45px;
+    }
+}
